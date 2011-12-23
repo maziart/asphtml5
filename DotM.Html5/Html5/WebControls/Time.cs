@@ -1,0 +1,44 @@
+﻿using System.ComponentModel;
+using System.Web.UI;
+
+namespace DotM.Html5.WebControls
+{
+    /// <summary>
+    ///  Represents a date and/or time.
+    /// </summary>
+    public class Time : ContainerControl
+    {
+        /// <summary>
+        /// Creates new instance of <c>Time</c>
+        /// </summary>
+        public Time() : base(ContainerType.Time) { }
+
+
+        /// <summary>
+        /// Adds HTML attributes and styles that need to be rendered to the specified
+        /// System.Web.UI.HtmlTextWriter instance.
+        /// </summary>
+        /// <param name="writer">An System.Web.UI.HtmlTextWriter that represents the output stream to render HTML content on the client</param>
+        protected override void AddAttributesToRender(HtmlTextWriter writer)
+        {
+            base.AddAttributesToRender(writer);
+            if (!string.IsNullOrEmpty(DateTime))
+                writer.AddAttribute("datetime", DateTime);
+            if (IsPubDate)
+                writer.AddAttribute("pubdate", null);
+        }
+
+        /// <summary>
+        /// Gets or sets the value that Specifies the date or time that the element represents
+        /// </summary>
+        /// <remarks>The value can be a time, a date or a date and time</remarks>
+        [Themeable(false), DefaultValue(""), Category("Behavior"), Description("Specifies the date or time that the element represents")]
+        public string DateTime { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value which indicates that the date and time given by the element is the publication date and time of the nearest ancestor article element — or, if the element has no ancestor article element, of the document as a whole.
+        /// </summary>
+        [Themeable(false), DefaultValue(false), Category("Behavior"), Description("Indicates that the date and time given by the element is the publication date and time of the nearest ancestor article element — or, if the element has no ancestor article element, of the document as a whole")]
+        public bool IsPubDate { get; set; }
+    }
+}
