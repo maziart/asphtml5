@@ -12,10 +12,10 @@
     <AssemblyName>DotM.Html5</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>%24/asphtml5/DotM.Html5/Html5</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs30</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
   </PropertyGroup>
@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\NamespaceDoc.cs" />
+    <Compile Include="Handlers\ScriptResourceHandler.cs" />
     <Compile Include="WebControls\MonthOfYear.cs" />
     <Compile Include="WebControls\NamespaceDoc.cs" />
     <Compile Include="WebControls\TimeOfDay.cs" />
@@ -88,7 +91,7 @@
     <Compile Include="WebControls\NumberInput.cs" />
     <Compile Include="WebControls\ColorInput.cs" />
     <Compile Include="WebControls\ContainerControl.cs" />
-    <Compile Include="WebControls\Range.cs" />
+    <Compile Include="WebControls\RangeInput.cs" />
     <Compile Include="WebControls\DataList.cs" />
     <Compile Include="WebControls\SearchInput.cs" />
     <Compile Include="WebControls\Section.cs" />
