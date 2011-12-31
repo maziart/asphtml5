@@ -161,10 +161,16 @@ function Sys$WebForms$PageRequestManager$_onFormSubmit(evt) {
         }
     }";
         #endregion
+        /// <summary>
+        /// processes HTTP Web requests for a script file that is embedded as a resource in an assembly.
+        /// </summary>
+        /// <param name="context">An System.Web.HttpContext object that provides references to the intrinsic
+        /// server objects (for example, Request, Response, Session, and Server) that
+        /// are used to service HTTP requests.
+        /// </param>
         protected sealed override void ProcessRequest(HttpContext context)
         {
             base.ProcessRequest(context);
-            //var qs = Page.DecryptString();
             if (CypherContainsAjax(context.Request.QueryString["d"]))
                 context.Response.Write(OnFormSubmit);
         }
@@ -173,7 +179,7 @@ function Sys$WebForms$PageRequestManager$_onFormSubmit(evt) {
         {
             var text = DecryptString(cypher);
             if (text == null)
-                return true;
+                return true; //Then Add it everywhere. What else could I do? :D
             return text.Contains("MicrosoftAjaxWebForms");
         }
 
