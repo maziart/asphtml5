@@ -33,12 +33,14 @@ namespace DotM.Html5.WebControls
         /// </summary>
         /// <remarks>The value can be a time, a date or a date and time</remarks>
         [Themeable(false), DefaultValue(""), Category("Behavior"), Description("Specifies the date or time that the element represents")]
-        public string DateTime { get; set; }
+        public string DateTime//TODO:DateTime
+        { get { return GetViewState("DateTime", string.Empty); } set { SetViewState("DateTime", value); } }
 
         /// <summary>
         /// Gets or sets the value which indicates that the date and time given by the element is the publication date and time of the nearest ancestor article element — or, if the element has no ancestor article element, of the document as a whole.
         /// </summary>
         [Themeable(false), DefaultValue(false), Category("Behavior"), Description("Indicates that the date and time given by the element is the publication date and time of the nearest ancestor article element — or, if the element has no ancestor article element, of the document as a whole")]
-        public bool IsPubDate { get; set; }
+        public bool IsPubDate
+        { get { return GetViewState("IsPubDate", false); } set { SetViewState("IsPubDate", value); } }
     }
 }

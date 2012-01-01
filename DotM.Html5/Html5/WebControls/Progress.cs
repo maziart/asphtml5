@@ -8,10 +8,8 @@ namespace DotM.Html5.WebControls
     /// Represents the completion progress of a task
     /// </summary>
     [Description("Represents the completion progress of a task")]
-    public class Progress : WebControl
+    public class Progress : Html5Control
     {
-        private float? _Maximum;
-        private float? _Value;
         /// <summary>
         /// Creates new instance of <c>Progress</c>
         /// </summary>
@@ -26,20 +24,22 @@ namespace DotM.Html5.WebControls
         protected override void AddAttributesToRender(System.Web.UI.HtmlTextWriter writer)
         {
             base.AddAttributesToRender(writer);
-            Helper.AddNullableFloatAttribute(writer, "max", _Maximum);
-            Helper.AddNullableFloatAttribute(writer, "value", _Value);
+            Helper.AddFloatAttributeIfNotDefault(writer, "max", Maximum, 1f);
+            Helper.AddFloatAttributeIfNotDefault(writer, "value", Value, 0f);
         }
 
         /// <summary>
         /// Gets or sets the value taht specifies how much work the task requires in total
         /// </summary>
-        [Themeable(false), DefaultValue(1), Category("Behavior"), Description("Specifies how much work the task requires in total")]
-        public float Maximum { get { return _Maximum ?? 1; } set { _Maximum = value; } }
+        [Themeable(false), DefaultValue(1f), Category("Behavior"), Description("Specifies how much work the task requires in total")]
+        public float Maximum
+        { get { return GetViewState("Maximum", 1f); } set { SetViewState("Maximum", value); } }
 
         /// <summary>
         /// Gets or sets the value that specifies how much of the task has been completed. 
         /// </summary>
-        [Themeable(false), DefaultValue(0), Category("Behavior"), Description("Specifies how much of the task has been completed.")]
-        public float Value { get { return _Value ?? 0; } set { _Value = value; } }
+        [Themeable(false), DefaultValue(0f), Category("Behavior"), Description("Specifies how much of the task has been completed.")]
+        public float Value
+        { get { return GetViewState("Value", 0f); } set { SetViewState("Value", value); } }
     }
 }

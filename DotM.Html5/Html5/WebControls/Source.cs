@@ -12,7 +12,7 @@ namespace DotM.Html5.WebControls
     /// Enables multiple media sources to be specified for audio and video elements.
     /// </summary>
     /// <remarks>This control can only be nested inside an <c>Audio</c> or <c>Video</c> Control</remarks>
-    public class Source : WebControl
+    public class Source : Html5Control
     {
         /// <summary>
         /// Creates new instance of <c>Source</c>
@@ -48,21 +48,24 @@ namespace DotM.Html5.WebControls
         /// Gets or sets the address of the media source
         /// </summary>
         [DefaultValue(""), Description("The address of the media source"), UrlProperty, Themeable(false), Category("Behavior")]
-        public string Url { get; set; }
+        public string Url
+        { get { return GetViewState("Url", string.Empty); } set { SetViewState("Url", value); } }
 
         /// <summary>
-        /// Gets or sets the type of the media source (used for helping the UA determine, before fetching this media source, if it can play it).
+        /// Gets or sets the type of the media source (used for helping the user agent determine, before fetching this media source, if it can play it).
         /// A string that identifies a valid MIME media type, as defined in [RFC2046].
         /// </summary>
         [DefaultValue(""), Description("The type of the media source"), Themeable(false)]
-        public string Type { get; set; }
+        public string Type
+        { get { return GetViewState("TypeAttr", string.Empty); } set { SetViewState("TypeAttr", value); } }
 
         /// <summary>
-        /// Gets or sets the intended media type of the media source (used for helping the UA determine, before fetching this media source, if it is useful to the user).
+        /// Gets or sets the intended media type of the media source (used for helping the user agent determine, before fetching this media source, if it is useful to the user).
         /// A valid media query list, as defined in [MediaQueries]
         /// </summary>
         [DefaultValue(""), Description("The intended media type of the media source"), Themeable(false), Category("Behavior")]
-        public string Media { get; set; }
+        public string Media
+        { get { return GetViewState("Media", string.Empty); } set { SetViewState("Media", value); } }
 
 
     }

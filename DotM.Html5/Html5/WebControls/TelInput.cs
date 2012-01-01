@@ -21,17 +21,6 @@ namespace DotM.Html5.WebControls
         /// Gets or sets the selected Tel
         /// </summary>
         [Themeable(false), DefaultValue(""), Category("Behavior"), Description("Selected Tel")]
-        public string Value
-        {
-            get
-            {
-
-                return Text;
-            }
-            set
-            {
-                Text = value;
-            }
-        }
+        public string Value { get { return Text; } set { Text = value; } }
     }
 }

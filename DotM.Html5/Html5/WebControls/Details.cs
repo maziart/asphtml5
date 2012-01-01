@@ -28,6 +28,7 @@ namespace DotM.Html5.WebControls
         /// Gets or sets a value which specifies that the contents of the details element should be shown to the user.
         /// </summary>
         [Themeable(false), DefaultValue(false), Category("Layout"), Description("Specifies that the contents of the details element should be shown to the user")]
-        public bool IsOpen { get; set; }
+        public bool IsOpen 
+        { get { return GetViewState("IsOpen", false); } set { SetViewState("IsOpen", value); } }
     }
 }

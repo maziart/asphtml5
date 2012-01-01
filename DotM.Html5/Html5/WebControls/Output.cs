@@ -13,7 +13,7 @@ namespace DotM.Html5.WebControls
     /// Represents the result of a calculation.
     /// </summary>
     [ParseChildren(true, "For")]
-    public class Output : WebControl
+    public class Output : Html5Control
     {
         private ForControlCollection forControls;
         /// <summary>
@@ -87,6 +87,7 @@ namespace DotM.Html5.WebControls
         /// Gets or sets the value of the id attribute on the form with which to associate the element.
         /// </summary>
         [Description("The value of the id attribute on the form with which to associate the element"), DefaultValue(""), Category("Default")]
-        public string FormID { get; set; }
+        public string FormID
+        { get { return GetViewState("FormID", string.Empty); } set { SetViewState("FormID", value); } }
     }
 }

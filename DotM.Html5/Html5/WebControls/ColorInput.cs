@@ -17,7 +17,7 @@ namespace DotM.Html5.WebControls
         /// Gets or sets the selected Color
         /// </summary>
         [Themeable(false), DefaultValue(""), Category("Behavior"), Description("Selected Color")]
-        public string Value
+        public string Value//TODO
         {
             get
             {

@@ -13,7 +13,7 @@ namespace DotM.Html5.WebControls
     /// to be specified for audio and video elements.
     /// </summary>
     /// <remarks>This control can only be nested inside an <c>Audio</c> or <c>Video</c> Control</remarks>
-    public class Track : WebControl
+    public class Track : Html5Control
     {
         /// <summary>
         /// Creates new instance of <c>Track</c>
@@ -48,36 +48,41 @@ namespace DotM.Html5.WebControls
             Helper.AddStringAttributeIfNotEmpty(writer, "label", Label);
             Helper.AddBooleanAttribute(writer, "default", IsDefault);
         }
-        
+
         /// <summary>
         /// Gets or sets the kind of timed track
         /// </summary>
         [DefaultValue(TrackKind.Subtitles), Description("The kind of timed track"), Themeable(false), Category("Behavior")]
-        public TrackKind Kind { get; set; }
+        public TrackKind Kind
+        { get { return GetViewState("Kind", TrackKind.Subtitles); } set { SetViewState("Kind", value); } }
 
         /// <summary>
         /// Gets or sets the address of the timed track
         /// </summary>
         [DefaultValue(""), Description("The address of the timed track"), UrlProperty, Themeable(false), Category("Behavior")]
-        public string Url { get; set; }
+        public string Url
+        { get { return GetViewState("Url", string.Empty); } set { SetViewState("Url", value); } }
 
         /// <summary>
         /// Gets or sets the language of the timed track
         /// </summary>
         [DefaultValue(""), Description("The language of the timed track"), Themeable(false), Category("Behavior")]
-        public string Language { get; set; }
+        public string Language
+        { get { return GetViewState("Language", string.Empty); } set { SetViewState("Language", value); } }
 
 
         /// <summary>
         /// Gets or sets the user-readable title for the timed track
         /// </summary>
         [DefaultValue(""), Description("A user-readable title for the timed track"), Themeable(false), Category("Behavior")]
-        public string Label { get; set; }
+        public string Label
+        { get { return GetViewState("Label", string.Empty); } set { SetViewState("Label", value); } }
 
         /// <summary>
-        /// Gets or sets a value that instructs the UA that the track is to be enabled if the user’s preferences do not indicate that another track would be more appropriate
+        /// Gets or sets a value that instructs the user agent that the track is to be enabled if the user’s preferences do not indicate that another track would be more appropriate
         /// </summary>
         [DefaultValue(false), Description("Is Default among tracks"), Themeable(false), Category("Behavior")]
-        public bool IsDefault { get; set; }
+        public bool IsDefault
+        { get { return GetViewState("IsDefault", false); } set { SetViewState("IsDefault", value); } }
     }
 }
