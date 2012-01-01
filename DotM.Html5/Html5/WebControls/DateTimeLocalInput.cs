@@ -34,26 +34,21 @@ namespace DotM.Html5.WebControls
         /// </summary>
         [Themeable(false), DefaultValue(""), Category("Behavior"), Description("The expected lower bound for the element’s value.")]
         public string Minimum
-        {
-            get;
-            set;
-        }
+        { get { return GetViewState("Minimum", string.Empty); } set { SetViewState("Minimum", value); } }
+
         /// <summary>
         /// Gets or sets the expected upper bound for the element’s value.
         /// </summary>
         [Themeable(false), DefaultValue(""), Category("Behavior"), Description("The expected upper bound for the element’s value.")]
         public string Maximum
-        {
-            get;
-            set;
-        }
+        { get { return GetViewState("Maximum", string.Empty); } set { SetViewState("Maximum", value); } }
+
         /// <summary>
         /// Gets or sets specifies the value granularity of the element’s value.
         /// </summary>
-        [Themeable(false), DefaultValue(1), Category("Behavior"), Description("Specifies the value granularity of the element’s value")]
-        public float Step { get { return _Step ?? 1; } set { _Step = value; } }
-
-        private float? _Step;
+        [Themeable(false), DefaultValue(1f), Category("Behavior"), Description("Specifies the value granularity of the element’s value")]
+        public float Step
+        { get { return GetViewState("Step", 1f); } set { SetViewState("Step", value); } }
 
 
         /// <summary>
@@ -66,7 +61,7 @@ namespace DotM.Html5.WebControls
             base.AddAttributesToRender(writer);
             Helper.AddStringAttributeIfNotEmpty(writer, "min", Minimum);
             Helper.AddStringAttributeIfNotEmpty(writer, "max", Maximum);
-            Helper.AddNullableFloatAttribute(writer, "step", _Step);
+            Helper.AddFloatAttributeIfNotDefault(writer, "step", Step, 1);
         }
     }
 }

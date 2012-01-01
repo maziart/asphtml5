@@ -29,24 +29,14 @@ namespace DotM.Html5.WebControls
         /// Gets or sets the selected text
         /// </summary>
         [Themeable(false), DefaultValue(""), Category("Behavior"), Description("Selected text")]
-        public string Value
-        {
-            get
-            {
-
-                return Text;
-            }
-            set
-            {
-                Text = value;
-            }
-        }
+        public string Value { get { return Text; } set { Text = value; } }
 
         /// <summary>
         /// Gets or sets a value that enables submission of a rtl/ltr for of the element (If switched by user), and gives the name of the field that contains that value.
         /// </summary>
         [Themeable(false), DefaultValue(""), Category("Behavior"), Description("Enables submission of a value for the directionality of the element, and gives the name of the field that contains that value.")]
-        public string DirName { get; set; }
+        public string DirName
+        { get { return GetViewState("DirName", string.Empty); } set { SetViewState("DirName", value); } }
 
     }
 }

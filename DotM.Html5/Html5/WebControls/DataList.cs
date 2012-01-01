@@ -15,7 +15,7 @@ namespace DotM.Html5.WebControls
     /// Represents a set of DataListItems that represent predefined options for other controls.
     /// </summary>
     [ParseChildren(true, "Items")]
-    public class DataList : DataBoundControl
+    public class DataList : Html5DataBoundControl
     {
         #region Fields
         private DataListItemCollection items;
@@ -170,12 +170,11 @@ namespace DotM.Html5.WebControls
         {
             get
             {
-                object obj2 = this.ViewState["AppendDataBoundItems"];
-                return ((obj2 != null) && ((bool)obj2));
+                return GetViewState("AppendDataBoundItems", false);
             }
             set
             {
-                this.ViewState["AppendDataBoundItems"] = value;
+                SetViewState("AppendDataBoundItems", value);
                 if (base.Initialized)
                 {
                     base.RequiresDataBinding = true;
@@ -190,16 +189,11 @@ namespace DotM.Html5.WebControls
         {
             get
             {
-                object obj2 = this.ViewState["DataValueField"];
-                if (obj2 != null)
-                {
-                    return (string)obj2;
-                }
-                return string.Empty;
+                return GetViewState("DataValueField", string.Empty);
             }
             set
             {
-                this.ViewState["DataValueField"] = value;
+                SetViewState("DataValueField", value);
                 if (base.Initialized)
                 {
                     base.RequiresDataBinding = true;

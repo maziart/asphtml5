@@ -30,11 +30,10 @@ namespace DotM.Html5.WebControls
                 return;
             writer.AddAttribute(attribName, value.ToString().ToLower());
         }
-
-        public static void AddNullableFloatAttribute(HtmlTextWriter writer, string attribName, float? value)
+        public static void AddFloatAttributeIfNotDefault(HtmlTextWriter writer, string attribName, float value, float defaultValue)
         {
-            if (value.HasValue)
-                writer.AddAttribute(attribName, value.Value.ToString());
+            if (value != defaultValue)
+                writer.AddAttribute(attribName, value.ToString());
         }
         public static void AddUrlAttributeIfNotEmpty(HtmlTextWriter writer, string attribName, string value, Control control)
         {

@@ -21,11 +21,9 @@ namespace DotM.Html5.WebControls
         /// <summary>
         /// Gets or sets a value indicating if user can input a comma seperated list of email addresses
         /// </summary>
-        [Themeable(false)]
-        [DefaultValue(false)]
-        [Category("Behavior")]
-        [Description("Enables user to input a comma seperated list of email addresses")]
-        public bool Multiple { get; set; }
+        [Themeable(false), DefaultValue(false), Category("Behavior"), Description("Enables user to input a comma seperated list of email addresses")]
+        public bool Multiple
+        { get { return GetViewState("Multiple", false); } set { SetViewState("Multiple", value); } }
 
 
         /// <summary>
@@ -41,29 +39,14 @@ namespace DotM.Html5.WebControls
         /// <summary>
         /// Gets or sets the selected email address
         /// </summary>
-        [Themeable(false)]
-        [DefaultValue(false)]
-        [Category("Behavior")]
-        [Description("Selected Email Address")]
+        [Themeable(false), DefaultValue(false), Category("Behavior"), Description("Selected Email Address")]
         public string Value
-        {
-            get
-            {
-                return Text;
-            }
-            set
-            {
-                Text = value;
-            }
-        }
+        { get { return Text; } set { Text = value; } }
 
         /// <summary>
         /// Gets or sets the selected email addresses
         /// </summary>
-        [Themeable(false)]
-        [DefaultValue(false)]
-        [Category("Behavior")]
-        [Description("Selected Email Addresses")]
+        [Themeable(false), DefaultValue(false), Category("Behavior"), Description("Selected Email Addresses")]
         public IEnumerable<string> Values
         {
             get

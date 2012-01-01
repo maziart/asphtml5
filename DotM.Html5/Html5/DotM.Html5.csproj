@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="Handlers\NamespaceDoc.cs" />
     <Compile Include="Handlers\ScriptResourceHandler.cs" />
+    <Compile Include="WebControls\Html5DataBoundControl.cs" />
+    <Compile Include="WebControls\Html5Control.cs" />
     <Compile Include="WebControls\MonthOfYear.cs" />
     <Compile Include="WebControls\NamespaceDoc.cs" />
     <Compile Include="WebControls\TimeOfDay.cs" />

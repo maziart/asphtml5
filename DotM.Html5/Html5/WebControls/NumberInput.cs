@@ -22,19 +22,22 @@ namespace DotM.Html5.WebControls
         /// Gets or sets the expected lower bound for the element’s value
         /// </summary>
         [Themeable(false), DefaultValue(float.MinValue), Category("Behavior"), Description("The expected lower bound for the element’s value")]
-        public float Minimum { get { return _Minimum ?? float.MinValue; } set { _Minimum = value; } }
+        public float Minimum
+        { get { return GetViewState("Minimum", float.MinValue); } set { SetViewState("Minimum", value); } }
 
         /// <summary>
         /// Gets or sets the expected upper bound for the element’s value
         /// </summary>
         [Themeable(false), DefaultValue(float.MinValue), Category("Behavior"), Description("The expected upper bound for the element’s value")]
-        public float Maximum { get { return _Maximum ?? float.MaxValue; } set { _Maximum = value; } }
+        public float Maximum
+        { get { return GetViewState("Maximum", float.MaxValue); } set { SetViewState("Maximum", value); } }
 
         /// <summary>
         /// Gets or sets the increment or decrement step
         /// </summary>
-        [Themeable(false), DefaultValue(1), Category("Behavior"), Description("The increment or decrement step")]
-        public float Step { get { return _Step ?? 1; } set { _Step = value; } }
+        [Themeable(false), DefaultValue(1f), Category("Behavior"), Description("The increment or decrement step")]
+        public float Step
+        { get { return GetViewState("Step", 1f); } set { SetViewState("Step", value); } }
 
         /// <summary>
         /// Adds HTML attributes and styles that need to be rendered to the specified
@@ -44,14 +47,10 @@ namespace DotM.Html5.WebControls
         protected override void AddAttributesToRender(System.Web.UI.HtmlTextWriter writer)
         {
             base.AddAttributesToRender(writer);
-            Helper.AddNullableFloatAttribute(writer, "min", _Minimum);
-            Helper.AddNullableFloatAttribute(writer, "max", _Maximum);
-            Helper.AddNullableFloatAttribute(writer, "step", _Step);
+            Helper.AddFloatAttributeIfNotDefault(writer, "min", Minimum, float.MinValue);
+            Helper.AddFloatAttributeIfNotDefault(writer, "max", Maximum, float.MaxValue);
+            Helper.AddFloatAttributeIfNotDefault(writer, "step", Step, 1f);
         }
-
-        private float? _Minimum;
-        private float? _Maximum;
-        private float? _Step;
 
 
         /// <summary>

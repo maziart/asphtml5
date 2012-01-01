@@ -13,7 +13,7 @@ namespace DotM.Html5.WebControls
     /// Represents a control for generating a public-private key pair and 
     /// for submitting the public key from that key pair.
     /// </summary>
-    public class Keygen : WebControl
+    public class Keygen : Html5Control
     {
         /// <summary>
         /// Creates a new instance of <c>Keygen</c>
@@ -58,27 +58,31 @@ namespace DotM.Html5.WebControls
         /// Gets or sets the value of the id attribute on the form with which to associate the element.
         /// </summary>
         [Description("The value of the id attribute on the form with which to associate the element"), DefaultValue(""), Category("Default")]
-        public string FormID { get; set; }
+        public string FormID
+        { get { return GetViewState("FormID", string.Empty); } set { SetViewState("FormID", value); } }
 
         /// <summary>
         /// Gets or sets a challenge string that is submitted along with the public key
         /// </summary>
         [Description("A challenge string that is submitted along with the public key"), DefaultValue(""), Category("Behavior")]
-        public string Challenge { get; set; }
+        public string Challenge
+        { get { return GetViewState("Challenge", string.Empty); } set { SetViewState("Challenge", value); } }
 
 
         /// <summary>
         /// Gets or sets the type of key generated
         /// </summary>
         [Description("The type of key generated"), DefaultValue(""), Category("Behavior")]
-        public string KeyType { get; set; }
+        public string KeyType
+        { get { return GetViewState("KeyType", string.Empty); } set { SetViewState("KeyType", value); } }
 
 
         /// <summary>
         /// Gets or sets a value which indicate that a control is to be focused as soon as the page is loaded
         /// </summary>
         [Themeable(false), DefaultValue(false), Category("Behavior"), Description("Indicate that a control is to be focused as soon as the page is loaded")]
-        public bool AutoFocus { get; set; }
+        public bool AutoFocus
+        { get { return GetViewState("AutoFocus", false); } set { SetViewState("AutoFocus", value); } }
 
     }
 }

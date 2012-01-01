@@ -10,7 +10,7 @@ namespace DotM.Html5.WebControls
     /// </summary>
     /// <remarks>Use of this class has been restricted to internal.</remarks>
     [PersistChildren(true), ParseChildren(false)]
-    public abstract class ContainerControl : WebControl
+    public abstract class ContainerControl : Html5Control
     {
         internal ContainerType Type { get; private set; }
         internal ContainerControl(ContainerType type)
@@ -22,7 +22,7 @@ namespace DotM.Html5.WebControls
         {
             return type.ToString().ToLower();
         }
-        
+
         /// <summary>
         /// Adds HTML attributes and styles that need to be rendered to the specified
         /// System.Web.UI.HtmlTextWriter instance.
@@ -113,31 +113,25 @@ namespace DotM.Html5.WebControls
         {
             get
             {
-                if (base.ControlStyleCreated)
+                if (!base.ControlStyleCreated)
+                    return string.Empty;
+                var controlStyle = base.ControlStyle as PanelStyle;
+                if (controlStyle != null)
                 {
-                    PanelStyle controlStyle = base.ControlStyle as PanelStyle;
-                    if (controlStyle != null)
-                    {
-                        return controlStyle.BackImageUrl;
-                    }
-                    string str = (string)this.ViewState["BackImageUrl"];
-                    if (str != null)
-                    {
-                        return str;
-                    }
+                    return controlStyle.BackImageUrl;
                 }
-                return string.Empty;
+                return GetViewState("BackImageUrl", string.Empty);
             }
             set
             {
-                PanelStyle controlStyle = base.ControlStyle as PanelStyle;
+                var controlStyle = base.ControlStyle as PanelStyle;
                 if (controlStyle != null)
                 {
                     controlStyle.BackImageUrl = value;
                 }
                 else
                 {
-                    this.ViewState["BackImageUrl"] = value;
+                    SetViewState("BackImageUrl", value);
                 }
             }
         }
@@ -150,36 +144,30 @@ namespace DotM.Html5.WebControls
         {
             get
             {
-                if (base.ControlStyleCreated)
+                if (!base.ControlStyleCreated)
+                    return ContentDirection.NotSet;
+                var controlStyle = base.ControlStyle as PanelStyle;
+                if (controlStyle != null)
                 {
-                    PanelStyle controlStyle = base.ControlStyle as PanelStyle;
-                    if (controlStyle != null)
-                    {
-                        return controlStyle.Direction;
-                    }
-                    object obj2 = this.ViewState["Direction"];
-                    if (obj2 != null)
-                    {
-                        return (ContentDirection)obj2;
-                    }
+                    return controlStyle.Direction;
                 }
-                return ContentDirection.NotSet;
+                return GetViewState("Direction", ContentDirection.NotSet);
             }
             set
             {
-                PanelStyle controlStyle = base.ControlStyle as PanelStyle;
+                var controlStyle = base.ControlStyle as PanelStyle;
                 if (controlStyle != null)
                 {
                     controlStyle.Direction = value;
                 }
                 else
                 {
-                    this.ViewState["Direction"] = value;
+                    SetViewState("Direction", value);
                 }
             }
         }
 
-        
+
         /// <summary>
         /// Gets of sets the horisontal align of the control
         /// </summary>
@@ -189,24 +177,18 @@ namespace DotM.Html5.WebControls
         {
             get
             {
-                if (base.ControlStyleCreated)
+                if (!base.ControlStyleCreated)
+                    return HorizontalAlign.NotSet;
+                var controlStyle = base.ControlStyle as PanelStyle;
+                if (controlStyle != null)
                 {
-                    PanelStyle controlStyle = base.ControlStyle as PanelStyle;
-                    if (controlStyle != null)
-                    {
-                        return controlStyle.HorizontalAlign;
-                    }
-                    object obj2 = this.ViewState["HorizontalAlign"];
-                    if (obj2 != null)
-                    {
-                        return (HorizontalAlign)obj2;
-                    }
+                    return controlStyle.HorizontalAlign;
                 }
-                return HorizontalAlign.NotSet;
+                return GetViewState("HorizontalAlign", HorizontalAlign.NotSet);
             }
             set
             {
-                PanelStyle controlStyle = base.ControlStyle as PanelStyle;
+                var controlStyle = base.ControlStyle as PanelStyle;
                 if (controlStyle != null)
                 {
                     controlStyle.HorizontalAlign = value;
@@ -217,7 +199,7 @@ namespace DotM.Html5.WebControls
                     {
                         throw new ArgumentOutOfRangeException("value");
                     }
-                    this.ViewState["HorizontalAlign"] = value;
+                    SetViewState("HorizontalAlign", value);
                 }
             }
         }
@@ -230,31 +212,25 @@ namespace DotM.Html5.WebControls
         {
             get
             {
-                if (base.ControlStyleCreated)
+                if (!base.ControlStyleCreated)
+                    return ScrollBars.None;
+                var controlStyle = base.ControlStyle as PanelStyle;
+                if (controlStyle != null)
                 {
-                    PanelStyle controlStyle = base.ControlStyle as PanelStyle;
-                    if (controlStyle != null)
-                    {
-                        return controlStyle.ScrollBars;
-                    }
-                    object obj2 = this.ViewState["ScrollBars"];
-                    if (obj2 != null)
-                    {
-                        return (ScrollBars)obj2;
-                    }
+                    return controlStyle.ScrollBars;
                 }
-                return ScrollBars.None;
+                return GetViewState("ScrollBars", ScrollBars.None);
             }
             set
             {
-                PanelStyle controlStyle = base.ControlStyle as PanelStyle;
+                var controlStyle = base.ControlStyle as PanelStyle;
                 if (controlStyle != null)
                 {
                     controlStyle.ScrollBars = value;
                 }
                 else
                 {
-                    this.ViewState["ScrollBars"] = value;
+                    SetViewState("ScrollBars", value);
                 }
             }
         }
@@ -268,31 +244,25 @@ namespace DotM.Html5.WebControls
         {
             get
             {
-                if (base.ControlStyleCreated)
+                if (!base.ControlStyleCreated)
+                    return true;
+                var controlStyle = base.ControlStyle as PanelStyle;
+                if (controlStyle != null)
                 {
-                    PanelStyle controlStyle = base.ControlStyle as PanelStyle;
-                    if (controlStyle != null)
-                    {
-                        return controlStyle.Wrap;
-                    }
-                    object obj2 = this.ViewState["Wrap"];
-                    if (obj2 != null)
-                    {
-                        return (bool)obj2;
-                    }
+                    return controlStyle.Wrap;
                 }
-                return true;
+                return GetViewState("Wrap", true);
             }
             set
             {
-                PanelStyle controlStyle = base.ControlStyle as PanelStyle;
+                var controlStyle = base.ControlStyle as PanelStyle;
                 if (controlStyle != null)
                 {
                     controlStyle.Wrap = value;
                 }
                 else
                 {
-                    this.ViewState["Wrap"] = value;
+                    SetViewState("Wrap", value);
                 }
             }
         }
