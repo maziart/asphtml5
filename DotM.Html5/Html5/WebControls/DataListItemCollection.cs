@@ -8,7 +8,7 @@ using System.Web.UI;
 namespace DotM.Html5.WebControls
 {
     /// <summary>
-    /// A Collection <c>DataListItem</c>s 
+    /// A Collection <see cref="DotM.Html5.WebControls.DataListItem" />s 
     /// </summary>
     public class DataListItemCollection : IList, ICollection, IEnumerable, IStateManager
     {

@@ -13,7 +13,7 @@ namespace DotM.Html5.WebControls
     public class NumberInput : InputControl
     {
         /// <summary>
-        /// Creates a new instance of <c>NumberInput</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.NumberInput" />
         /// </summary>
         public NumberInput() : base(InputType.Number) { }
         internal NumberInput(InputType type) : base(type) { }

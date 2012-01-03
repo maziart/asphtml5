@@ -9,7 +9,7 @@ namespace DotM.Html5.WebControls
     public class TextInput : InputControl
     {
         /// <summary>
-        /// Creates new instance of <c>TextInput</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.TextInput" />
         /// </summary>
         public TextInput() : base(InputType.Text) { }
 

@@ -20,11 +20,11 @@ namespace DotM.Html5.WebControls
         #endregion
         #region Methods
         /// <summary>
-        /// Creates a new instance of <c>ForControl</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.ForControl" />
         /// </summary>
         public ForControl() : this(null) { }
         /// <summary>
-        /// Creates a new instance of <c>ForControl</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.ForControl" />
         /// </summary>
         /// <param name="refId">The server ID of the associated control</param>
         public ForControl(string refId)
@@ -32,10 +32,10 @@ namespace DotM.Html5.WebControls
             this.refId = refId;
         }
         /// <summary>
-        /// Determines whether the specified <c>System.Object</c> is equal to the current <c>ForControl</c>
+        /// Determines whether the specified <see cref="System.Object" /> is equal to the current <see cref="DotM.Html5.WebControls.ForControl" />
         /// </summary>
-        /// <param name="o">The <c>System.Object</c> to compare with the current ForControl</param>
-        /// <returns>true if the specified <c>System.Object</c> is equal to the current <c>ForControl</c>; otherwise, false.</returns>    
+        /// <param name="o">The <see cref="System.Object" /> to compare with the current ForControl</param>
+        /// <returns>true if the specified <see cref="System.Object" /> is equal to the current <see cref="DotM.Html5.WebControls.ForControl" />; otherwise, false.</returns>    
         public override bool Equals(object o)
         {
             ForControl item = o as ForControl;
@@ -49,16 +49,16 @@ namespace DotM.Html5.WebControls
         /// <summary>
         /// Serves as a hash function for a particular type.
         /// </summary>
-        /// <returns>A hash code for the current <c>ForControl</c>.</returns>
+        /// <returns>A hash code for the current <see cref="DotM.Html5.WebControls.ForControl" />.</returns>
         public override int GetHashCode()
         {
             return RefID.GetHashCode();
         }
         /// <summary>
-        /// returns a new <c>ForControl</c> instance with the specified value
+        /// returns a new <see cref="DotM.Html5.WebControls.ForControl" /> instance with the specified value
         /// </summary>
         /// <param name="value">the value member of the new instance</param>
-        /// <returns>A new instance of type <c>ForControl</c></returns>
+        /// <returns>A new instance of type <see cref="DotM.Html5.WebControls.ForControl" /></returns>
         public static ForControl FromString(string value)
         {
             return new ForControl(value);

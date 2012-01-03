@@ -8,7 +8,7 @@ namespace DotM.Html5.WebControls
     public class Canvas : ContainerControl
     {
         /// <summary>
-        /// Creates a new instance of <c>Canvas</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.Canvas" />
         /// </summary>
         public Canvas() : base(ContainerType.Canvas) { }
     }

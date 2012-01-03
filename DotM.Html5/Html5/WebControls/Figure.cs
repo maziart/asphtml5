@@ -6,10 +6,11 @@ namespace DotM.Html5.WebControls
     /// that is typically referenced as a single unit from the main flow of the document, 
     /// and that can be moved away from the main flow of the document without affecting the document’s meaning.
     /// </summary>
+    /// <seealso cref="DotM.Html5.WebControls.FigCaption"/>
     public class Figure : ContainerControl
     {
         /// <summary>
-        /// Creates a new instance of <c>Figure</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.Figure" />
         /// </summary>
         public Figure() : base(ContainerType.Figure) { }
     }

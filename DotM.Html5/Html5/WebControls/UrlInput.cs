@@ -9,7 +9,7 @@ namespace DotM.Html5.WebControls
     public class UrlInput : InputControl
     {
         /// <summary>
-        /// Creates a new instance of type <c>UrlInput</c>
+        /// Creates a new instance of type <see cref="DotM.Html5.WebControls.UrlInput" />
         /// </summary>
         public UrlInput() : base(InputType.Url) { }
 

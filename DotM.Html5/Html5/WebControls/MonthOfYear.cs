@@ -27,7 +27,7 @@ namespace DotM.Html5.WebControls
             _MonthNumber = 0;
         }
         /// <summary>
-        /// Creates a new instance of <c>MonthOfYear</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.MonthOfYear" />
         /// </summary>
         /// <param name="year">Year</param>
         /// <param name="monthNumber">A value between 1 and 12, month</param>
@@ -51,7 +51,7 @@ namespace DotM.Html5.WebControls
         /// Add the specified number of months to the current instance
         /// </summary>
         /// <param name="value">Number of months to add; value can be negative</param>
-        /// <returns>A new instance of <c>MonthOfYear</c></returns>
+        /// <returns>A new instance of <see cref="DotM.Html5.WebControls.MonthOfYear" /></returns>
         public MonthOfYear AddMonths(byte value)
         {
             var newMonthNumber = (byte)(_MonthNumber + value);
@@ -86,7 +86,7 @@ namespace DotM.Html5.WebControls
         /// Parses a formatted string and creates new MonthOfYear instance
         /// </summary>
         /// <param name="value">The formatted MonthOfYear string</param>
-        /// <returns>New instance of <c>MonthOfYear</c></returns>
+        /// <returns>New instance of <see cref="DotM.Html5.WebControls.MonthOfYear" /></returns>
         public static MonthOfYear Parse(string value)
         {
             if (string.IsNullOrWhiteSpace(value))

@@ -13,7 +13,7 @@ namespace DotM.Html5.WebControls
     public class TelInput : InputControl
     {
         /// <summary>
-        /// Creates new instance of <c>TelInput</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.TelInput" />
         /// </summary>
         public TelInput() : base(InputType.Tel) { }
 

@@ -11,7 +11,7 @@ namespace DotM.Html5.WebControls
     public class Section : ContainerControl
     {
         /// <summary>
-        /// Creates a new instance of <c>Section</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.Section" />
         /// </summary>
         public Section() : base(ContainerType.Section) { }
     }

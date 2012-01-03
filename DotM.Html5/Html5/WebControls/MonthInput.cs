@@ -9,7 +9,7 @@ namespace DotM.Html5.WebControls
     public class MonthInput : InputControl
     {
         /// <summary>
-        /// Creates a new instance of <c>MonthInput</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.MonthInput" />
         /// </summary>
         public MonthInput() : base(InputType.Month) { }
 

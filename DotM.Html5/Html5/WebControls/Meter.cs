@@ -16,7 +16,7 @@ namespace DotM.Html5.WebControls
     {
 
         /// <summary>
-        /// Creates a new instance of <c>Meter</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.Meter" />
         /// </summary>
         public Meter() : base("meter") { }
 

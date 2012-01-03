@@ -26,7 +26,7 @@ namespace DotM.Html5.WebControls
             _Minute = 0;
         }
         /// <summary>
-        /// Creates a new instance of <c>TimeOfDay</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.TimeOfDay" />
         /// </summary>
         /// <param name="hour">A value between 0 and 23 represiting hour of the day</param>
         /// <param name="minute">A value between 0 and 59 representing minute of hour</param>
@@ -44,9 +44,9 @@ namespace DotM.Html5.WebControls
                 throw new ArgumentOutOfRangeException("Minute  must be non-negarive and less than 60");
         }
         /// <summary>
-        /// Creates a <c>System.TimeSpan</c> object from the current TimeOfDay instance
+        /// Creates a <see cref="System.TimeSpan" /> object from the current TimeOfDay instance
         /// </summary>
-        /// <returns>The <c>System.TimeSpan</c> object filled with current TimeOfDay instance</returns>
+        /// <returns>The <see cref="System.TimeSpan" /> object filled with current TimeOfDay instance</returns>
         public TimeSpan ToTimeSpan()
         {
             return new TimeSpan(_Hour, _Minute, 0);
@@ -60,19 +60,19 @@ namespace DotM.Html5.WebControls
             return string.Format("{0:00}:{1:00}", _Hour, _Minute);
         }
         /// <summary>
-        /// Initialized a new <c>TimeOfDay</c> from the <c>System.TimeSpan</c> object passed
+        /// Initialized a new <see cref="DotM.Html5.WebControls.TimeOfDay" /> from the <see cref="System.TimeSpan" /> object passed
         /// </summary>
         /// <param name="value">the intended TimeSpan value</param>
-        /// <returns>A new instance of type <c>TimeOfDay</c></returns>
+        /// <returns>A new instance of type <see cref="DotM.Html5.WebControls.TimeOfDay" /></returns>
         public static TimeOfDay FromTimeSpan(TimeSpan value)
         {
             return new TimeOfDay((byte)value.Hours, (byte)value.Minutes);
         }
         /// <summary>
-        /// Parses the string passed and returns a new instance of <c>TimeOfDay</c>
+        /// Parses the string passed and returns a new instance of <see cref="DotM.Html5.WebControls.TimeOfDay" />
         /// </summary>
         /// <param name="value">the formatted string representation of a time of day</param>
-        /// <returns>A new instance of type <c>TimeOfDay</c></returns>
+        /// <returns>A new instance of type <see cref="DotM.Html5.WebControls.TimeOfDay" /></returns>
         public static TimeOfDay Parse(string value)
         {
             if (string.IsNullOrWhiteSpace(value))

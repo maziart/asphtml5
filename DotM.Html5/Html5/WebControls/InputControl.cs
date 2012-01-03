@@ -178,7 +178,7 @@ namespace DotM.Html5.WebControls
 
         #region Hidden Properties
         /// <summary>
-        /// Hidden property <c>Text</c>
+        /// Hidden property
         /// </summary>
         /// <remarks>Do not use this property manually</remarks>
         [Browsable(false)]
@@ -195,10 +195,10 @@ namespace DotM.Html5.WebControls
         }
 
         /// <summary>
-        /// Hidden property <c>Rows</c>
+        /// Hidden property
         /// </summary>
         /// <remarks>Do not use this property manually</remarks>
-        [Browsable(false)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public override int Rows
         {
             get
@@ -212,10 +212,10 @@ namespace DotM.Html5.WebControls
         }
 
         /// <summary>
-        /// Hidden property <c>Columns</c>
+        /// Hidden property
         /// </summary>
         /// <remarks>Do not use this property manually</remarks>
-        [Browsable(false)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public override int Columns
         {
             get
@@ -229,10 +229,10 @@ namespace DotM.Html5.WebControls
         }
 
         /// <summary>
-        /// Hidden property <c>TextMode</c>
+        /// Hidden property
         /// </summary>
         /// <remarks>Do not use this property manually</remarks>
-        [Browsable(false)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public override TextBoxMode TextMode
         {
             get

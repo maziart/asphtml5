@@ -9,7 +9,7 @@ namespace DotM.Html5.WebControls
     public class DateTimeInput : InputControl
     {
         /// <summary>
-        /// Creates a new instance of <c>DateTimeInput</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.DateTimeInput" />
         /// </summary>
         public DateTimeInput() : base(InputType.DateTime) { }
 

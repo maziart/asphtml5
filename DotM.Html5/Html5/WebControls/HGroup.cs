@@ -7,7 +7,7 @@ namespace DotM.Html5.WebControls
     public class HGroup : ContainerControl
     {
         /// <summary>
-        /// Creates new instance of <c>HGroup</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.HGroup" />
         /// </summary>
         public HGroup() : base(ContainerType.HGroup) { }
     }
