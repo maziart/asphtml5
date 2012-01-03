@@ -8,11 +8,11 @@ namespace DotM.Html5.WebControls
     /// <summary>
     /// Represents a summary, caption, or legend for a details element.
     /// </summary>
-    /// <remarks>This control can only be nested inside a <c>Details</c> Control</remarks>
+    /// <remarks>This control can only be nested inside a <see cref="DotM.Html5.WebControls.Details" /> Control</remarks>
     public class Summary : ContainerControl
     {
         /// <summary>
-        /// Creates new instance of <c>Summary</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.Summary" />
         /// </summary>
         public Summary() : base(ContainerType.Summary) { }
 
@@ -20,7 +20,7 @@ namespace DotM.Html5.WebControls
         /// Renders the control to the specified HTML writer.
         /// </summary>
         /// <param name="writer">The System.Web.UI.HtmlTextWriter object that receives the control content.</param>
-        /// <exception cref="System.InvalidOperationException">Thrown when nested inside a type other than <c>Details</c></exception>
+        /// <exception cref="System.InvalidOperationException">Thrown when nested inside a type other than <see cref="DotM.Html5.WebControls.Details" /></exception>
         protected override void Render(System.Web.UI.HtmlTextWriter writer)
         {
             var parent = this.Parent as Details;

@@ -14,7 +14,7 @@ namespace DotM.Html5.WebControls
     public class TimeInput : InputControl
     {
         /// <summary>
-        /// Creates a new instance of <c>TimeInput</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.TimeInput" />
         /// </summary>
         public TimeInput() : base(InputType.Time) { }
 

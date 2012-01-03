@@ -9,7 +9,7 @@ namespace DotM.Html5.WebControls
     public class Details : ContainerControl
     {
         /// <summary>
-        /// Creates new instance of type <c>Details</c>
+        /// Creates new instance of type <see cref="DotM.Html5.WebControls.Details" />
         /// </summary>
         public Details() : base(ContainerType.Details) { }
 

@@ -11,7 +11,7 @@ using System.Globalization;
 namespace DotM.Html5.WebControls
 {
     /// <summary>
-    /// Represents an option among the list of suggestions in a <c>DataList</c>
+    /// Represents an option among the list of suggestions in a <see cref="DotM.Html5.WebControls.DataList" />
     /// </summary>
     [ParseChildren(true, "Value")]
     public class DataListItem : IStateManager, IParserAccessor, IAttributeAccessor
@@ -51,10 +51,10 @@ namespace DotM.Html5.WebControls
             this.enabled = enabled;
         }
         /// <summary>
-        /// Determines whether the specified <c>System.Object</c> is equal to the current <c>DataListItem</c>
+        /// Determines whether the specified <see cref="System.Object" /> is equal to the current <see cref="DotM.Html5.WebControls.DataListItem" />
         /// </summary>
-        /// <param name="o">The <c>System.Object</c> to compare with the current DataListItem</param>
-        /// <returns>true if the specified <c>System.Object</c> is equal to the current <c>DataListItem</c>; otherwise, false.</returns>    
+        /// <param name="o">The <see cref="System.Object" /> to compare with the current DataListItem</param>
+        /// <returns>true if the specified <see cref="System.Object" /> is equal to the current <see cref="DotM.Html5.WebControls.DataListItem" />; otherwise, false.</returns>    
         public override bool Equals(object o)
         {
             DataListItem item = o as DataListItem;
@@ -67,16 +67,16 @@ namespace DotM.Html5.WebControls
         /// <summary>
         /// Serves as a hash function for a particular type.
         /// </summary>
-        /// <returns>A hash code for the current <c>DataListItem</c>.</returns>
+        /// <returns>A hash code for the current <see cref="DotM.Html5.WebControls.DataListItem" />.</returns>
         public override int GetHashCode()
         {
             return Value.GetHashCode();
         }
         /// <summary>
-        /// returns a new <c>DataListItem</c> instance with the specified value
+        /// returns a new <see cref="DotM.Html5.WebControls.DataListItem" /> instance with the specified value
         /// </summary>
         /// <param name="value">the value member of the new instance</param>
-        /// <returns>A new instance of type <c>DataListItem</c></returns>
+        /// <returns>A new instance of type <see cref="DotM.Html5.WebControls.DataListItem" /></returns>
         public static DataListItem FromString(string value)
         {
             return new DataListItem(value);

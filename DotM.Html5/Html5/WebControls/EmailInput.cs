@@ -14,7 +14,7 @@ namespace DotM.Html5.WebControls
     public class EmailInput : InputControl
     {
         /// <summary>
-        /// Creates a new instance of <c>EmailInpute</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.EmailInput" />
         /// </summary>
         public EmailInput() : base(InputType.Email) { }
 

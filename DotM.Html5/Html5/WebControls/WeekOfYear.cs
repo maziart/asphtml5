@@ -27,7 +27,7 @@ namespace DotM.Html5.WebControls
             _WeekNumber = 0;
         }
         /// <summary>
-        /// Creates a new instance of <c>WeekOfYear</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.WeekOfYear" />
         /// </summary>
         /// <param name="year">Year</param>
         /// <param name="weekNumber">A Value from 1 to 53 representing week of the year</param>
@@ -52,7 +52,7 @@ namespace DotM.Html5.WebControls
         /// Adds specified number of weeks to the instance
         /// </summary>
         /// <param name="value">Number of weeks to add; value can be negative</param>
-        /// <returns>A new instance of type <c>WeekOfYear</c></returns>
+        /// <returns>A new instance of type <see cref="DotM.Html5.WebControls.WeekOfYear"/></returns>
         public WeekOfYear AddWeeks(byte value)
         {
             var newWeekNumber = (byte)(_WeekNumber + value);
@@ -173,7 +173,7 @@ namespace DotM.Html5.WebControls
         /// Parses a formatted string and creates new WeekOfYear instance
         /// </summary>
         /// <param name="value">The formatted WeekOfYear string</param>
-        /// <returns>New instance of <c>WeekOfYear</c></returns>
+        /// <returns>New instance of <see cref="DotM.Html5.WebControls.WeekOfYear" /></returns>
         public static WeekOfYear Parse(string value)
         {
             if (string.IsNullOrWhiteSpace(value))

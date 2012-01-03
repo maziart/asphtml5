@@ -13,7 +13,7 @@ namespace DotM.Html5.WebControls
     public class Audio : ContainerControl
     {
         /// <summary>
-        /// Creates a new instance of <c>Audio</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.Audio" />
         /// </summary>
         public Audio() : base(ContainerType.Audio) { }
 

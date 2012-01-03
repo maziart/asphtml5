@@ -11,7 +11,7 @@ namespace DotM.Html5.WebControls
     public class Progress : Html5Control
     {
         /// <summary>
-        /// Creates new instance of <c>Progress</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.Progress" />
         /// </summary>
         public Progress() : base("progress") { }
 

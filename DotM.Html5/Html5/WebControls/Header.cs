@@ -7,7 +7,7 @@ namespace DotM.Html5.WebControls
     public class Header : ContainerControl
     {
         /// <summary>
-        /// Creates new instance of <c>Header</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.Header" />
         /// </summary>
         public Header() : base(ContainerType.Header) { }
     }

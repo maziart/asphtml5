@@ -11,7 +11,7 @@ namespace DotM.Html5.WebControls
     public class Footer : ContainerControl
     {
         /// <summary>
-        /// Creates a new instace of <c>Footer</c>
+        /// Creates a new instace of <see cref="DotM.Html5.WebControls.Footer" />
         /// </summary>
         public Footer() : base(ContainerType.Footer) { }
     }

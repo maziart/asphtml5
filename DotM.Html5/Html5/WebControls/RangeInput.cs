@@ -11,7 +11,7 @@ namespace DotM.Html5.WebControls
     public class RangeInput : NumberInput
     {
         /// <summary>
-        /// Creates new instance of <c>RanceInput</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.RangeInput" />
         /// </summary>
         public RangeInput() : base(InputType.Range) { }
     }

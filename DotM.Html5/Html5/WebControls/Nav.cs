@@ -12,7 +12,7 @@ namespace DotM.Html5.WebControls
     public class Nav : ContainerControl
     {
         /// <summary>
-        /// Creates new instance of <c>Nav</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.Nav" />
         /// </summary>
         public Nav() : base(ContainerType.Nav) { }
     }

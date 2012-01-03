@@ -17,7 +17,7 @@ namespace DotM.Html5.WebControls
     {
         private ForControlCollection forControls;
         /// <summary>
-        /// Creates a new instance of <c>Output</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.Output" />
         /// </summary>
         public Output() : base("output") { }
 

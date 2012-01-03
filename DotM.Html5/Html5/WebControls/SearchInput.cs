@@ -13,7 +13,7 @@ namespace DotM.Html5.WebControls
     public class SearchInput : InputControl
     {
         /// <summary>
-        /// Creates a new instance of <c>SearchInput</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.SearchInput" />
         /// </summary>
         public SearchInput() : base(InputType.Search) { }
 

@@ -8,7 +8,7 @@ namespace DotM.Html5.WebControls
     public class Article : ContainerControl
     {
         /// <summary>
-        /// Creates a new instance of <c>Article</c>
+        /// Creates a new instance of <see cref="DotM.Html5.WebControls.Article" />
         /// </summary>
         public Article() : base(ContainerType.Article) { }
     }

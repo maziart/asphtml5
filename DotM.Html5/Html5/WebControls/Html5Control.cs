@@ -9,11 +9,11 @@ namespace DotM.Html5.WebControls
     public abstract class Html5Control : WebControl
     {
         /// <summary>
-        /// Initializes a new instance of the <c>Html5Control</c> class
+        /// Initializes a new instance of the <see cref="DotM.Html5.WebControls.Html5Control" /> class
         /// </summary>
         public Html5Control() : base() { }
         /// <summary>
-        /// Initializes a new instance of the <c>Html5Control</c> class which renders the specified tag
+        /// Initializes a new instance of the <see cref="DotM.Html5.WebControls.Html5Control" /> class which renders the specified tag
         /// </summary>
         /// <param name="tag">Tag of the html element</param>
         public Html5Control(string tag) : base(tag) { }

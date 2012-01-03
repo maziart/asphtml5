@@ -9,7 +9,7 @@ namespace DotM.Html5.WebControls
     public class Time : ContainerControl
     {
         /// <summary>
-        /// Creates new instance of <c>Time</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.Time" />
         /// </summary>
         public Time() : base(ContainerType.Time) { }
 

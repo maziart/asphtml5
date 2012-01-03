@@ -11,18 +11,21 @@ namespace DotM.Html5.WebControls
     /// <summary>
     /// Enables multiple media sources to be specified for audio and video elements.
     /// </summary>
-    /// <remarks>This control can only be nested inside an <c>Audio</c> or <c>Video</c> Control</remarks>
+    /// <remarks>This control can only be nested inside an <see cref="DotM.Html5.WebControls.Audio" /> or <see cref="DotM.Html5.WebControls.Video" /> Control</remarks>
+    /// <seealso cref="DotM.Html5.WebControls.Audio"/>
+    /// <seealso cref="DotM.Html5.WebControls.Video"/>
+    /// <seealso cref="DotM.Html5.WebControls.Track"/>
     public class Source : Html5Control
     {
         /// <summary>
-        /// Creates new instance of <c>Source</c>
+        /// Creates new instance of <see cref="DotM.Html5.WebControls.Source" />
         /// </summary>
         public Source() : base("source") { }
         /// <summary>
         /// Renders the control to the specified HTML writer.
         /// </summary>
         /// <param name="writer">The System.Web.UI.HtmlTextWriter object that receives the control content.</param>
-        /// <exception cref="System.InvalidOperationException">Thrown when nested inside a type other than <c>Video</c> or <c>Audio</c></exception>
+        /// <exception cref="System.InvalidOperationException">Thrown when nested inside a type other than <see cref="DotM.Html5.WebControls.Video" /> or <see cref="DotM.Html5.WebControls.Audio" /></exception>
         protected override void Render(HtmlTextWriter writer)
         {
             var parent = this.Parent;

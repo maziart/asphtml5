@@ -16,7 +16,7 @@ using System.Web.Configuration;
 namespace DotM.Html5.Handlers
 {
     /// <summary>
-    /// Changes some of functionalities of <c>System.Web.Handlers.ScriptResourceHandler</c> to meet html 5
+    /// Changes some of functionalities of <see cref="System.Web.Handlers.ScriptResourceHandler" /> to meet html 5
     /// </summary>
     public class ScriptResourceHandler : System.Web.Handlers.ScriptResourceHandler
     {

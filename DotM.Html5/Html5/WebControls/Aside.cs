@@ -7,7 +7,7 @@ namespace DotM.Html5.WebControls
     public class Aside : ContainerControl
     {
         /// <summary>
-        /// Creates a new instance of type <c>Aside</c>
+        /// Creates a new instance of type <see cref="DotM.Html5.WebControls.Aside" />
         /// </summary>
         public Aside() : base(ContainerType.Aside) { }
     }
