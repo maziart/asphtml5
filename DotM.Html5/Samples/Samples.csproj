@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotM.Html5, Version=1.0.1.2, Culture=neutral, PublicKeyToken=cf15bd0a8dbc673d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -112,12 +115,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\Html5\DotM.Html5.csproj">
-      <Project>{DE5F8ED0-C10F-4D1F-9623-4D02C7A7AF06}</Project>
-      <Name>DotM.Html5</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <None Include="Herald\Acknowledgement-webfont.eot" />
     <None Include="Herald\Acknowledgement-webfont.svg" />
