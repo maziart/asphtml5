@@ -22,6 +22,33 @@ namespace Samples {
         protected global::DotM.Html5.WebControls.Article ac1;
         
         /// <summary>
+        /// video control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DotM.Html5.WebControls.Video video;
+        
+        /// <summary>
+        /// videoStill control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image videoStill;
+        
+        /// <summary>
+        /// canvasOverlay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DotM.Html5.WebControls.Canvas canvasOverlay;
+        
+        /// <summary>
         /// ac2 control.
         /// </summary>
         /// <remarks>

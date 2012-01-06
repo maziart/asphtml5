@@ -8,7 +8,6 @@ lang="en">
     <link rel="stylesheet" href="~/Herald/Styles.css" />
     <link rel="stylesheet" href="~/Herald/Screen.css" />
     <script src="./Herald/modernizr-1.7.min.js"></script>
-    <%--    <script type="text/javascript" charset="UTF-8" src="./Herald/{common,util}.js"></script>--%>
     <title>The HTML 5 Herald</title>
 </head>
 <body class="hyphenate">
@@ -25,8 +24,10 @@ lang="en">
         </html5:HGroup>
         <html5:Nav runat="server">
             <ul>
-                <li><asp:HyperLink runat="server" NavigateUrl="~/ViewCode.aspx?p=Herald.aspx" Text="Herald.aspx"></asp:HyperLink></li>
-                <li><asp:HyperLink runat="server" NavigateUrl="~/ViewCode.aspx?p=Herald.aspx.cs" Text="Herald.aspx.cs"></asp:HyperLink></li>
+                <li>
+                    <asp:HyperLink runat="server" NavigateUrl="~/ViewCode.aspx?p=Herald.aspx" Text="Herald.aspx"></asp:HyperLink></li>
+                <li>
+                    <asp:HyperLink runat="server" NavigateUrl="~/ViewCode.aspx?p=Herald.aspx.cs" Text="Herald.aspx.cs"></asp:HyperLink></li>
             </ul>
         </html5:Nav>
         <p id="volume">
@@ -40,17 +41,15 @@ lang="en">
         <div id="primary">
             <html5:Article runat="server" ID="ac1" ClientIDMode="Static">
                 <div id="video-container">
-                   <%-- <html5:Video runat="server" Width="373" Height="280" PreLoad="Auto" Poster="~/Herald/ford-plane-still.png"
-                        ID="video" ClientIDMode="Static">
+                    <html5:Video runat="server" Width="373" Height="280" PreLoad="Auto" ID="video" ClientIDMode="Static"
+                        Poster="./Herald/ford-plane-still.png">
                         <!-- MP4 must be first for iPad! -->
-                        <html5:Source runat="server" Url="~/Herald/ford-plane-takes-off.mp4" Type="video/mp4" />
-                        <!-- Safari / iOS video -->
-                        <html5:Source runat="server" Url="~/Herald/ford-plane-takes-off.ogv" Type="video/ogg" />
-                        <!-- Firefox / Opera / Chrome10 -->
-                    </html5:Video>--%>
-                    <%--<html5:Canvas runat="server" ID="canvasOverlay" ClientIDMode="Static" Width="373"
-                        Height="280">
-                    </html5:Canvas>
+                        <html5:Source runat="server" Url="~/Herald/ford-plane-takes-off.mp4" Type="video/mp4" /><!-- Safari / iOS video -->
+                        <html5:Source runat="server" Url="~/Herald/ford-plane-takes-off.ogv" Type="video/ogg" /><!-- Firefox / Opera / Chrome10 -->
+                        <asp:Image runat="server" ImageUrl="~/Herald/ford-plane-still.png" ID="videoStill" ClientIDMode="Static"
+                            Width="373" Height="280" AlternateText="Airplane" />
+                    </html5:Video>
+                    <html5:Canvas runat="server" ID="canvasOverlay" ClientIDMode="Static" Width="373" Height="280"></html5:Canvas>
                     <div id="controls" class="">
                         <div id="playPause" class="paused" tabindex="1">
                             Play/Pause</div>
@@ -58,20 +57,7 @@ lang="en">
                             00:00</div>
                         <div id="muteUnmute" class="unmuted" tabindex="2">
                             Mute/Un­mute</div>
-                    </div>--%>
-                    <video width="373" height="280" preload="" id="video" poster="./Herald/ford-plane-still.png">
-        <!-- MP4 must be first for iPad! -->
-			<source src="./Herald/ford-plane-takes-off.mp4" type="video/mp4"><!-- Safari / iOS video -->
-			<source src="./Herald/ford-plane-takes-off.ogv" type="video/ogg"><!-- Firefox / Opera / Chrome10 -->
-            <img src="./Herald/ford-plane-still.png" id="video-still" width="373" height="280" alt="Airplane">
-			
-     	</video>
-                    <canvas id="canvasOverlay" width="373" height="280"></canvas>
-		<div id="controls" class="">
-			<div id="playPause" class="paused" tabindex="1">Play/Pause</div>
-			<div id="timer">00:00</div>
-			<div id="muteUnmute" class="unmuted" tabindex="2">Mute/Un­mute</div>
-		</div>
+                    </div>
                 </div>
                 <!-- /#video-container -->
                 <h1>
@@ -231,10 +217,11 @@ lang="en">
                         <h2>
                             Enter An Email</h2>
                         <form id="emailForm" runat="server">
-                            <html5:EmailInput ID="Email1" runat="server" Required="true" Width="150px"></html5:EmailInput>
-                            <asp:Label ID="Label1" runat="server" Text="Age is disabled"></asp:Label>
-                            <html5:NumberInput ID="Number1" Minimum="18" Maximum="457" Enabled="false" runat="server" Width="150px"></html5:NumberInput>
-                            <asp:Button Text="Submit" runat="server" ID="Button1" OnClick="Button1_Submit" />
+                        <html5:EmailInput ID="Email1" runat="server" Required="true" Width="150px"></html5:EmailInput>
+                        <asp:Label ID="Label1" runat="server" Text="Age is disabled"></asp:Label>
+                        <html5:NumberInput ID="Number1" Minimum="18" Maximum="457" Enabled="false" runat="server"
+                            Width="150px"></html5:NumberInput>
+                        <asp:Button Text="Submit" runat="server" ID="Button1" OnClick="Button1_Submit" />
                         </form>
                     </div>
                 </html5:Article>
