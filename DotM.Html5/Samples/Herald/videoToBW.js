@@ -8,7 +8,7 @@ function makeVideoOldTimey ()
     var canvas = document.getElementById("canvasOverlay");
     var context = canvas.getContext("2d");
     
-    var still = document.getElementById("video-still");
+    var still = document.getElementById("videoStill");
     
     // draw a black and white version of the video poster to display by default
     drawOneFrame(still,context,canvas);
