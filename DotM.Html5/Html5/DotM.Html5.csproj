@@ -59,6 +59,31 @@
   <ItemGroup>
     <Compile Include="Handlers\NamespaceDoc.cs" />
     <Compile Include="Handlers\ScriptResourceHandler.cs" />
+    <Compile Include="Handlers\SVGRenderer.cs" />
+    <Compile Include="SVG\Circle.cs" />
+    <Compile Include="SVG\Definitions.cs" />
+    <Compile Include="SVG\Ellipse.cs" />
+    <Compile Include="SVG\Group.cs" />
+    <Compile Include="SVG\Line.cs" />
+    <Compile Include="SVG\LineBase.cs" />
+    <Compile Include="SVG\Path.cs" />
+    <Compile Include="SVG\PathCommand.cs" />
+    <Compile Include="SVG\Point.cs" />
+    <Compile Include="SVG\PointCollection.cs" />
+    <Compile Include="SVG\Polygon.cs" />
+    <Compile Include="SVG\PolyLine.cs" />
+    <Compile Include="SVG\Rectangle.cs" />
+    <Compile Include="SVG\Serializable.cs" />
+    <Compile Include="SVG\StrokeLineCapMode.cs" />
+    <Compile Include="SVG\Svg.cs" />
+    <Compile Include="SVG\SVGControl.cs" />
+    <Compile Include="SVG\SVGControlType.cs" />
+    <Compile Include="SVG\SvgStyle.cs" />
+    <Compile Include="SVG\SVGUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SVG\TransformCommand.cs" />
+    <Compile Include="SVG\Use.cs" />
     <Compile Include="WebControls\Html5DataBoundControl.cs" />
     <Compile Include="WebControls\Html5Control.cs" />
     <Compile Include="WebControls\MonthOfYear.cs" />
@@ -72,7 +97,7 @@
     <Compile Include="WebControls\Details.cs" />
     <Compile Include="WebControls\ForControl.cs" />
     <Compile Include="WebControls\ForControlCollection.cs" />
-    <Compile Include="WebControls\Helper.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="WebControls\InputAutoCompleteMode.cs" />
     <Compile Include="WebControls\Keygen.cs" />
     <Compile Include="WebControls\Output.cs" />

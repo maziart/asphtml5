@@ -87,7 +87,7 @@ namespace DotM.Html5.WebControls
             {
                 if (obj is DataBoundLiteralControl)
                 {
-                    throw new HttpException("Control Cannot Databind");
+                    throw new HttpException("Control Cannot Data-bind");
                 }
                 throw new HttpException("Cannot Have Children Of Type" + obj.GetType().Name.ToString(CultureInfo.InvariantCulture));
             }
