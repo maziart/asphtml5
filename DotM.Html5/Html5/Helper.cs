@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
-namespace DotM.Html5.WebControls
+namespace DotM.Html5
 {
-    internal class Helper
+    internal static class Helper
     {
         public static void AddStringAttributeIfNotEmpty(HtmlTextWriter writer, string attribName, string value)
         {
@@ -40,6 +41,38 @@ namespace DotM.Html5.WebControls
             if (string.IsNullOrEmpty(value))
                 return;
             writer.AddAttribute(attribName, control.ResolveClientUrl(value));
+        }
+
+        public static void AddUnitAttributeIfNotEmpty(HtmlTextWriter writer, string attribName, Unit value)
+        {
+            if (!value.IsEmpty)
+                writer.AddAttribute(attribName, UnitToString(value));
+        }
+
+        public static string UnitToString(Unit value)
+        {
+            return value.Type == UnitType.Pixel ? value.Value.ToString() : value.ToString();
+        }
+
+
+        public static bool TryParseUnit(string input, out Unit unit)
+        {
+            var u = Unit.Empty;
+            var result = TryInvoke(() => u = Unit.Parse(input));
+            unit = u;
+            return result;
+        }
+        private static bool TryInvoke(Action action)
+        {
+            try
+            {
+                action();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

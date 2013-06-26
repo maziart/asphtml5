@@ -17,6 +17,7 @@ namespace DotM.Html5.WebControls
         Summary,
         Details,
         Video,
-        Audio
+        Audio,
+        SVG
     }
 }
